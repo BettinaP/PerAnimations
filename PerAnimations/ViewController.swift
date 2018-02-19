@@ -47,10 +47,10 @@ class ViewController: UIViewController {
     @IBAction func growTapped(_ sender: UIButton) {
        //frame allows you to set both coordinates and size of image
         //will be at top left corner of screen because it's aspect fit so the frame of the image at top left but since image isn't a square and thus is only viewable slight down from the top corner of screen
-        imageView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        imageView.frame = CGRect(x: self.view.center.x, y: self.view.center.y, width: 0, height: 0)
         
         UIView.animate(withDuration: 1) {
-            self.imageView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+            self.imageView.frame = CGRect(x: self.view.center.x - 200, y: self.view.center.y - 200, width: 400, height: 400)
         }
         
     }
