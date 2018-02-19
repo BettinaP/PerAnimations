@@ -24,6 +24,38 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func fadeInTapped(_ sender: UIButton) {
+        
+        imageView.alpha = 0 //image invisible
+        
+        UIView.animate(withDuration: 1) {
+            self.imageView.alpha = 1
+        }
+    }
+    
+    
+    @IBAction func slideInTapped(_ sender: UIButton) {
+        
+        imageView.center = CGPoint(x: imageView.center.x - 500, y: imageView.center.y)
+        
+        UIView.animate(withDuration: 2) {
+            self.imageView.center = CGPoint(x: self.imageView.center.x + 500, y: self.imageView.center.y)
+        }
+        
+    }
+    
+    @IBAction func growTapped(_ sender: UIButton) {
+       //frame allows you to set both coordinates and size of image
+        //will be at top left corner of screen because it's aspect fit so the frame of the image at top left but since image isn't a square and thus is only viewable slight down from the top corner of screen
+        imageView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        
+        UIView.animate(withDuration: 1) {
+            self.imageView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+        }
+        
+    }
+    
+    
     @objc func animate() {
         
         imageView.image = UIImage(named:"frame_\(counter)_delay-0.07s.gif")
@@ -35,6 +67,7 @@ class ViewController: UIViewController {
             
         }
     }
+    
     
     @IBAction func startAnimationTapped(_ sender: UIButton) {
                 
@@ -53,5 +86,6 @@ class ViewController: UIViewController {
         }
         
     }
+    
     
 }

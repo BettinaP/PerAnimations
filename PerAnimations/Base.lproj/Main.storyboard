@@ -18,22 +18,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="frame_00_delay-0.07s.gif" translatesAutoresizingMaskIntoConstraints="NO" id="QuS-Dy-i5K">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_00_delay-0.07s.gif" translatesAutoresizingMaskIntoConstraints="NO" id="QuS-Dy-i5K">
                                 <rect key="frame" x="0.0" y="227" width="375" height="212"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dER-xS-xit">
-                                <rect key="frame" x="136" y="476" width="103" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dER-xS-xit">
+                                <rect key="frame" x="136" y="174" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1kL-Ut-FhK"/>
+                                </constraints>
                                 <state key="normal" title="StartAnimation"/>
                                 <connections>
                                     <action selector="startAnimationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iUM-5Z-3Ss"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbG-Jl-PQs">
+                                <rect key="frame" x="28" y="481" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="IEl-fe-Wtc"/>
+                                    <constraint firstAttribute="height" constant="30" id="gDe-2i-NTf"/>
+                                </constraints>
+                                <state key="normal" title="Fade In"/>
+                                <connections>
+                                    <action selector="fadeInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4cc-uL-Ahz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-GZ-UbO">
+                                <rect key="frame" x="279" y="481" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CE2-ok-FCR"/>
+                                    <constraint firstAttribute="width" constant="62" id="XzU-z5-deQ"/>
+                                </constraints>
+                                <state key="normal" title="Grow"/>
+                                <connections>
+                                    <action selector="growTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Yz-3o-qj2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zJ-k3-dOa">
+                                <rect key="frame" x="156" y="481" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="ji5-86-3t6"/>
+                                    <constraint firstAttribute="height" constant="30" id="sVX-Gr-dlU"/>
+                                </constraints>
+                                <state key="normal" title="Slide in"/>
+                                <connections>
+                                    <action selector="slideInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1NV-sy-4iU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dER-xS-xit" firstAttribute="top" secondItem="QuS-Dy-i5K" secondAttribute="bottom" constant="37" id="1k5-eN-CNw"/>
-                            <constraint firstItem="dER-xS-xit" firstAttribute="centerX" secondItem="QuS-Dy-i5K" secondAttribute="centerX" id="PPK-f8-5fn"/>
+                            <constraint firstItem="g0P-GZ-UbO" firstAttribute="top" secondItem="QuS-Dy-i5K" secondAttribute="bottom" constant="42" id="1NM-5R-X3a"/>
+                            <constraint firstItem="3zJ-k3-dOa" firstAttribute="leading" secondItem="UbG-Jl-PQs" secondAttribute="trailing" constant="66" id="G5s-4u-PhU"/>
+                            <constraint firstItem="QuS-Dy-i5K" firstAttribute="top" secondItem="dER-xS-xit" secondAttribute="bottom" constant="23" id="OQw-z4-kG8"/>
+                            <constraint firstItem="UbG-Jl-PQs" firstAttribute="top" secondItem="QuS-Dy-i5K" secondAttribute="bottom" constant="42" id="PI0-TX-Q4V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g0P-GZ-UbO" secondAttribute="trailing" constant="34" id="aBy-SM-cta"/>
+                            <constraint firstItem="g0P-GZ-UbO" firstAttribute="leading" secondItem="3zJ-k3-dOa" secondAttribute="trailing" constant="61" id="dDv-Fc-YeM"/>
+                            <constraint firstItem="UbG-Jl-PQs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="dH4-SK-7Pz"/>
+                            <constraint firstItem="3zJ-k3-dOa" firstAttribute="top" secondItem="QuS-Dy-i5K" secondAttribute="bottom" constant="42" id="fDO-3T-xLA"/>
                             <constraint firstItem="QuS-Dy-i5K" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gl6-BU-1Oa"/>
+                            <constraint firstItem="3zJ-k3-dOa" firstAttribute="centerX" secondItem="QuS-Dy-i5K" secondAttribute="centerX" id="ha0-9Y-c9N"/>
+                            <constraint firstItem="dER-xS-xit" firstAttribute="centerX" secondItem="QuS-Dy-i5K" secondAttribute="centerX" id="lkj-KT-PJW"/>
+                            <constraint firstItem="dER-xS-xit" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="154" id="qV3-bz-35h"/>
                             <constraint firstItem="QuS-Dy-i5K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u32-NG-0Q1"/>
                             <constraint firstItem="QuS-Dy-i5K" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-10.5" id="x61-Xi-Ied"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QuS-Dy-i5K" secondAttribute="trailing" id="zKM-iz-JTO"/>
