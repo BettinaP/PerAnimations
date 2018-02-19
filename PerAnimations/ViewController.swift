@@ -37,20 +37,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startAnimationTapped(_ sender: UIButton) {
-        
-        if isAnimating {
-            timer.invalidate()
-            animationButton.setTitle("Start Animation", for: .normal)
-            isAnimating = false
+                
+        if !isAnimating {
             
-        } else {
             timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector:#selector(ViewController.animate), userInfo: nil, repeats: true)
             animationButton.setTitle("Stop Animation", for: .normal)
             isAnimating = true
+            
+        } else {
+            
+            timer.invalidate()
+            animationButton.setTitle("Start Animation", for: .normal)
+            isAnimating = false
             
         }
         
     }
     
 }
-
